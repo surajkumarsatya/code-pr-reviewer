@@ -1,7 +1,7 @@
 import { inngest } from "@/features/inngest/client";
 import { prisma } from "@/lib/db";
 import { formatPrFilesForReview, getPullRequestFiles } from "./pr-files";
-import { generateReview } from "./generate-review";
+import { generateReview } from "./generate-reviews";
 import { postPrComment } from "./post-pr-comment";
 import { chunkPrFiles } from "../utils/chunk-code";
 import { buildPrNamespace, saveChunksToPinecone, searchPrContext } from "./vector";
