@@ -4,6 +4,7 @@ import { getUserIdByInstallationId } from "./installation";
 // import { canUserReview } from "@/features/billing/server/usage";
 import { prisma } from "@/lib/db";
 import { inngest } from "@/features/inngest/client";
+import { canUserReview } from "@/features/billing/server/usage";
 
 const REVIEWABLE_ACTIONS = ["opened", "synchronize", "reopened"];
 

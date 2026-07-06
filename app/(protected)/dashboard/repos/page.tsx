@@ -1,5 +1,3 @@
-
-
 import type { Metadata } from "next";
 import Link from "next/link";
 
@@ -23,8 +21,11 @@ function ReposNotConnected() {
       <p className="text-sm text-muted-foreground">
         Install the GitHub App first to see your repositories.
       </p>
-      <Button nativeButton={false} render={<Link href={DASHBOARD_ROUTES.github} />}>
-        Go to GitHub App
+
+      <Button asChild>
+        <Link href={DASHBOARD_ROUTES.github}>
+          Go to GitHub App
+        </Link>
       </Button>
     </div>
   );
