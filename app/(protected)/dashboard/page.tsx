@@ -1,9 +1,20 @@
-import React from 'react'
+import type { Metadata } from "next";
 
-const Dashboard = () => {
+import { DashboardHeader } from "@/features/dashboard/components/dashboard-header";
+import { OverviewContent } from "@/features/dashboard/components/overview-content";
+
+export const metadata: Metadata = {
+  title: "Overview · Dashboard",
+};
+
+export default function DashboardOverviewPage() {
   return (
-    <div>Dashboard</div>
-  )
+    <>
+      <DashboardHeader
+        title="Overview"
+        description="Summary of reviews and connected repositories."
+      />
+      <OverviewContent />
+    </>
+  );
 }
-
-export default Dashboard
